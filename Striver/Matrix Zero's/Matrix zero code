@@ -1,0 +1,25 @@
+public class Solution {
+    public static void setZeros(int matrix[][]) {
+        // Write your code here..
+        int N=matrix.length;
+        int M=matrix[0].length;
+        int []row=new int[N];
+        int []column=new int[M];
+        for(int i=0;i<N;i++){
+            for(int j=0;j<M;j++){
+                if(matrix[i][j]==0){
+                    row[i]=-1;
+                    column[j]=-1;
+                }
+            }
+        }
+        for(int i=0;i<N;i++){
+            for(int j=0;j<M;j++){
+                if(row[i]==-1 || column[j]==-1){
+                    matrix[i][j]=0;
+                }
+            }
+        }
+    }
+
+}
